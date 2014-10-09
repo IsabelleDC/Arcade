@@ -1,0 +1,23 @@
+{%  extends 'base_template.html' %}
+{% load staticfiles %}
+
+{% block extra_head %}
+    <link rel="stylesheet" type ="text/css" href="{% static 'css/pokemon.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/pokemon.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+<body>
+     <h1>Pokemon</h1>
+<div class="pok">
+<button id="randomPokemon" class="btn btn-info">Get a random pokemon</button>
+<button id="getTeam" class="btn btn-info">Get a random team</button>
+
+<div id="pokeContainer"></div>
+<div id="teamContainer"></div>
+</div>
+
+ </body>
+ {% endblock content %}

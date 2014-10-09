@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+}
+
+canvas {
+    margin: 30px 0;
+    background-color: #ffffff;
+}
+
+#colors {
+    margin: 30px 0 10px 0;
+}
+
+.color_choice {
+    height: 20px;
+    width: 30px;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    border-color: grey;
+}
+
+h1 {
+    margin-top: 100px;
+    letter-spacing: 28px;
+    color:#ffffff;
+}
+
+button#add_color {background: mediumspringgreen;}

@@ -1,0 +1,45 @@
+{%  extends 'base_template.html' %}
+{% load staticfiles %}
+{%  block content %}
+
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{% static 'js/paint.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/paint.css' %}">
+    </head>
+
+
+    <body>
+    <h1>Paint</h1>
+
+    <div id="colors"></div>
+
+    <div id="color_form">
+        <input type="text" id="color_field">
+        <button id="add_color" class="btn btn-info">Add color</button>
+        <button id="erase" class="btn btn-info"> Erase</button>
+        <input type="radio" name="size" value=" 5 " checked > 5
+        <input type="radio" name="size" value=" 10 "> 10
+        <input type="radio" name="size" value=" 15 "> 15
+        <input type="radio" name="size" value=" 20 " > 20
+        {#            <button id="changeBackground">Change background</button>#}
+    </div>
+
+    <div id="image_form"></div>
+
+    <div id="images"></div>
+
+{#    <canvas id="canvas" width="500" height="400" style="background-image:url(http://media3.onsugar.com/files/2013/09/16/986/n/1922507/37a5737a772b585d_wall_1136_640_1.xxxlarge/i/Parallel-Wallpaper.jpg);#}
+{#                    height:300px; width:500px;">#}
+
+      <canvas id="canvas" width="500" height="400" class="canvas">
+
+    </canvas>
+
+    <button id="clearCanvas" class="btn btn-info"> Reset</button>
+
+    </body>
+
+{% endblock content %}
+
+

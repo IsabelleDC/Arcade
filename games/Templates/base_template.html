@@ -1,0 +1,78 @@
+{%  load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+     <title>Arcade</title>
+
+     <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!--css style-->
+    <link rel="stylesheet" type ="text/css" href="{% static 'css/base.css' %}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+{% block extra_head %} {% endblock %}
+
+<body>
+
+
+<!--Navbar-->
+<div class="bs-example">
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+                <a href="{% url 'base_template' %}" class="navbar-brand">Arcade!</a>
+
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                 <li class="active"><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'memory' %}">Memory</a></li>
+                <li><a href="{% url 'paint' %}">Paint</a></li>
+                <li><a href="{% url 'snake' %}">Snake</a></li>
+                <li><a href="{% url 'pokemon' %}">Pokemon</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                    {% endif %}
+            </ul>
+          </div>
+    </nav>
+</div>
+<!--End navbar-->
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+            <div class="presentation">
+                <h1>WELCOME ON ARCADE</h1>
+            </div>
+        </div>
+
+
+</div>
+{% endblock content %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</body>
+<footer>
+
+</footer>
+</html>
+

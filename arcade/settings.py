@@ -104,8 +104,17 @@ DATABASES['default'] = dj_database_url.config()
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+if DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+    STATIC_ROOT = "http://murmuring-springs-1111.herokuapp.com/static"
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
 
 try:
     from local_settings import *

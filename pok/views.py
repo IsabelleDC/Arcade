@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 # from django.shortcuts import render
 
 # Create your views here.
-from Arcade.pok.models import Pokemon
+from pok.models import Team, Pokemon
 
 
 def all_pokemon(request):

@@ -3,10 +3,10 @@ from django.core import serializers
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from pok.models import Pokemon, Team
 # from django.shortcuts import render
 
 # Create your views here.
+from Arcade.pok.models import Pokemon
 
 
 def all_pokemon(request):

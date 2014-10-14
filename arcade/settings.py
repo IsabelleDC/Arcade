@@ -21,8 +21,7 @@ SECRET_KEY = 'prx66$1&mv*-#wwfxm^u67rqsk-v**p#tj=x2-g2oyw!!)rmai'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -108,10 +107,10 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+#
 
 
 try:

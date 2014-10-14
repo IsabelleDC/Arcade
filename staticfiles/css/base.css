@@ -1,0 +1,17 @@
+body{
+  background-image: url('/static/img/background.jpeg');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-color: yellow;
+}
+.presentation {
+  color:white;
+  height: 300px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top:150px;
+  letter-spacing: 25px;
+}
+.navbar{
+    background-color: #031634;
+}
